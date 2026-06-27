@@ -2339,7 +2339,8 @@ const ChatInputComponent: React.FC<ChatInputProps> = ({ onOpenSettings, scrollTo
                     for (const qm of snap.queuedItems) {
                         if (snap.sessionId) {
                             addToQueue(snap.sessionId, {
-                                message: qm.message,
+                                content: qm.content,
+                                attachments: qm.attachments,
                                 sendConfig: qm.sendConfig,
                             });
                         }
@@ -2374,7 +2375,8 @@ const ChatInputComponent: React.FC<ChatInputProps> = ({ onOpenSettings, scrollTo
                 for (const qm of snap.queuedItems) {
                     if (snap.sessionId) {
                         addToQueue(snap.sessionId, {
-                            message: qm.message,
+                            content: qm.content,
+                            attachments: qm.attachments,
                             sendConfig: qm.sendConfig,
                         });
                     }
